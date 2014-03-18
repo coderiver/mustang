@@ -218,6 +218,7 @@ a
 	margin-bottom: 15px
 
 .topper
+	position: relative
 	overflow: hidden
 
 .main-block
@@ -285,10 +286,10 @@ a
 
 
 .toolbar
-	position: relative
+	// position: relative
 	+clr
 .toolbar__item
-	// position: relative
+	position: relative
 	float: left
 	width: 50%
 	height: 240px
@@ -296,6 +297,7 @@ a
 		.toolbar__content
 			right: 100%
 			+opacity(1)
+			z-index: 106
 	&.toolbar__item_service
 		.toolbar__desc
 			background-color: #0e95cd
@@ -323,6 +325,8 @@ a
 				+s(feedback)
 				content: ""
 		.toolbar__content
+			// z-index: 106
+			width: 750px - 30px
 			background: #0076a7
 .toolbar__desc
 	position: relative
@@ -348,14 +352,169 @@ a
 	+opacity(0)
 	+transition(all .3s)
 
-.services
-	color: #fff
+
+.tabs
+.tabs__nav
+	+clr
+	li
+		position: relative
+		float: left
+		width: 230px
+		height: 240px
+		text-align: center
 	a
+		display: block
+		height: 240px - 160px
+		padding-top: 160px
+		font-size: 16px
+		font-weight: bold
 		color: #fff
+		text-align: center
+		text-decoration: none
+.tabs__nav_services
+	background-color: #0e95cd
+	&:hover
+		background-color: #14a0da
+	&:before
+		position: absolute
+		top: 52px
+		left: 50%
+		margin-left: -31px
+		+s(service)
+		content: ""
+.tabs__nav_feedback
+	background-color: #0076a7
+	&:hover
+		background-color: #0684b8
+	&:before
+		position: absolute
+		top: 65px
+		left: 50%
+		margin-left: -32px
+		+s(feedback)
+		content: ""
+.tabs__content
+	position: absolute
+	left: 0
+	top: 0
+	width: 520px
+	height: 490px
+	z-index: 106
+	padding: 45px 15px
+	+box
+	&.feedback
+		width: 750px
+	&.services
+		background-color: #0e95cd
+		padding: 45px 0 0 15px
+
+
+.services
+.services__menu
+	color: #fff
 	ul
 		display: inline-block
 		vertical-align: top
-		min-width: 225px
+		//width: 225px
+		margin-left: 10px
+		&:first-child
+			margin-left: 0
+	li
+		margin-bottom: 7px
+		&:hover
+			background: #0082b8
+	a
+		position: relative
+		display: block
+		color: #fff
+		font-size: 12px
+		font-weight: bold
+		text-decoration: none
+		line-height: 20px
+		padding: 12px 20px 12px 60px
+		+text-overflow
+		[class^="icon-"],
+		[class*=" icon-"]
+			position: absolute
+			left: 17px
+			top: 50%
+			margin-top: -13px
+		.icon-motor
+			+s(icon_motor)
+			margin-top: -9px
+		.icon-transmission
+			+s(icon_transmission)
+			margin-top: -13px
+		.icon-starter
+			+s(icon_starter)
+			margin-top: -13px
+		.icon-brake
+			+s(icon_brake)
+			margin-top: -13px
+		.icon-exhaust
+			+s(icon_exhaust)
+			margin-top: -11px
+		.icon-body
+			+s(icon_body)
+			margin-top: -8px
+		.icon-electro
+			+s(icon_electro)
+			margin-top: -11px
+		.icon-support
+			+s(icon_support)
+			margin-top: -12px
+		.icon-extra
+			+s(icon_extra)
+			margin-top: -10px
+		.icon-music
+			+s(icon_music)
+			margin-top: -13px
+		.icon-tire
+			+s(icon_tire)
+			margin-top: -13px
+		.icon-glass
+			+s(icon_glass)
+			margin-top: -7px
+		.icon-wash
+			+s(icon_wash)
+			margin-top: -13px
+		.icon-disk
+			+s(icon_disk)
+			margin-top: -13px
+		&:hover
+			.icon-motor
+				+s(icon_motor_h)
+			.icon-transmission
+				+s(icon_transmission_h)
+			.icon-starter
+				+s(icon_starter_h)
+			.icon-brake
+				+s(icon_brake_h)
+			.icon-exhaust
+				+s(icon_exhaust_h)
+			.icon-body
+				+s(icon_body_h)
+			.icon-electro
+				+s(icon_electro_h)
+			.icon-support
+				+s(icon_support_h)
+			.icon-extra
+				+s(icon_extra_h)
+			.icon-music
+				+s(icon_music_h)
+			.icon-tire
+				+s(icon_tire_h)
+			.icon-glass
+				+s(icon_glass_h)
+			.icon-wash
+				+s(icon_wash_h)
+			.icon-disk
+				+s(icon_disk_h)
+
+
+
+
+
 
 
 
