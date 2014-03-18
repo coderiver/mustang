@@ -1,2 +1,361 @@
+body
+	font-size: 12px
+	font-family: Arial, sans-serif
+	line-height: 1.4
+
+	color: #fff
+	background-color: #303030
+	background: url('../img/bg.jpg') 50% 0
+	min-width: 1000px
+
+a
+	color: #0e95cd
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+%in
+	width: 980px
+	margin-left: auto
+	margin-right: auto
+.container
+	@extend %in
+
 // Normally mainpage styles
- 
+
+.header
+	margin-bottom: 30px
+	font-size: 14px
+	color: #fff
+.header__in
+	@extend %in
+	padding-top: 20px
+.header__row
+	+clr
+.header__logo
+	float: left
+	margin-right: 100px
+	+s(logo)
+.header__slogan
+	float: left
+	width: 300px
+	margin-top: 20px
+	color: #a9a9a9
+.header__contacts
+	position: relative
+	float: right
+	margin-top: 15px
+	padding-right: 100px
+.header__tel
+	font-weight: bold
+	font-size: 20px
+.header__adr
+	font-size: 12px
+	color: #a9a9a9
+.header__callback
+	i
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		+s(callback)
+.header__24h
+	display: block
+	position: absolute
+	top: 0
+	right: 0
+	+s(h24)
+.nav
+	margin-top: 25px
+.nav__list
+	+clr
+	text-align: center
+.nav__item
+	position: relative
+	display: inline-block
+	font-size: 15px
+	text-transform: uppercase
+	margin: 0 5px
+	+border-radius(5px)
+	&:hover, &.is-active
+		a
+			border-color: #fff
+	& > a
+		display: block
+		line-height: 20px
+		color: #fff
+		text-decoration: none
+		border: 3px solid transparent
+		padding: 7px 20px
+		+border-radius(5px)
+.nav__item_drop
+	+border-radius(5px 5px 0 0)
+	&:hover
+		background: #fff
+		a
+			color: #4d4d4d
+		.nav__dropmenu
+			display: block
+.nav__dropmenu
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	display: none
+	background: #fff
+	+border-radius(0 0 5px 5px)
+	padding: 10px 0 25px
+	z-index: 110
+	li
+		font-size: 13px
+		color: #424244
+		text-transform: none
+		text-align: left
+		padding: 0 37px
+		margin-bottom: 8px
+	a
+		color: #424244
+		text-decoration: none
+		&:hover
+			color: #02a7ec
+			text-decoration: none
+// Sticky footer
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -225px
+.footer, .push
+	height: 225px
+
+.footer
+	font-size: 13px
+	color: #7a7a7a
+.footer__in
+	@extend %in
+.footer__menu
+	height: 90px
+	line-height: 90px
+	text-align: center
+	background-color: #1d1d1d
+	li
+		position: relative
+		display: inline-block
+		margin: 0 30px
+		&:hover, &.is-active
+			&:before
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 4px
+				background-color: #ffbc00
+				content: ""
+			a
+				color: #fff
+				text-decoration: none
+	a
+		position: relative
+		display: block
+		color: #959595
+		padding: 0 5px
+		text-decoration: underline
+		&:hover
+			color: #fff
+			text-decoration: none
+.footer__row
+	position: relative
+	+clr
+	margin-top: 40px
+	padding: 0 15px
+.footer__copy
+	float: left
+	width: 315px
+	margin-bottom: 15px
+.footer__social
+	position: absolute
+	left: 30px
+	top: 30px
+	+clr
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-left: 25px
+		&:first-child
+			margin-left: 0
+	a
+		display: block
+		+hidetext
+		+opacity(0.7)
+		+transition(all .3s)
+		&:hover
+			+opacity(1)
+	.fb
+		+s(fb)
+	.tw
+		+s(tw)
+	.vk
+		+s(vk)
+.footer__contacts
+	position: relative
+	float: left
+	width: 395px - 75px
+	margin-left: 20px
+	padding-left: 75px
+	&:before
+		position: absolute
+		left: 20px
+		top: 0
+		+s(pin)
+		content: ""
+.footer__adv
+	float: right
+	+s(adv)
+	a
+		display: block
+		height: 100%
+
+.page
+	margin-bottom: 15px
+
+.topper
+	overflow: hidden
+
+.main-block
+	position: relative
+	height: 490px
+	overflow: hidden
+.main-block__picture
+	position: relative
+	width: 520px
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		content: ""
+		background: url(../img/shadow.png)
+		+cover
+	img
+		display: block
+		min-width: 100%
+		min-height: 100%
+.main-block__content
+	position: absolute
+	top: 95px
+	left: 35px
+	right: 35px
+.main-block__title
+	margin-bottom: 1em
+	line-height: 1
+	font-size: 60px
+	color: #fff
+	font-weight: bold
+.main-block__desc
+	font-size: 18px
+	font-weight: bold
+	color: #fff
+	margin-bottom: 1em
+.main-block__moar
+	font-size: 15px
+	color: #01b2fc
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+.main-block__pager
+	position: absolute
+	bottom: 20px
+	left: 40px
+	z-index: 101
+
+.pager
+	span
+		display: inline-block
+		vertical-align: top
+		width: 10px
+		height: 10px
+		+border-radius(50%)
+		+s(pager)
+		cursor: pointer
+		margin-left: 9px
+		&:first-child
+			margin-left: 0
+		&.is-active
+			+s(pager_active)
+
+
+.toolbar
+	position: relative
+	+clr
+.toolbar__item
+	// position: relative
+	float: left
+	width: 50%
+	height: 240px
+	&.is-active
+		.toolbar__content
+			right: 100%
+			+opacity(1)
+	&.toolbar__item_service
+		.toolbar__desc
+			background-color: #0e95cd
+			&:hover
+				background-color: #14a0da
+			&:before
+				position: absolute
+				top: 52px
+				left: 50%
+				margin-left: -31px
+				+s(service)
+				content: ""
+		.toolbar__content
+			background: #0e95cd
+	&.toolbar__item_feedback
+		.toolbar__desc
+			background-color: #0076a7
+			&:hover
+				background-color: #0684b8
+			&:before
+				position: absolute
+				top: 65px
+				left: 50%
+				margin-left: -32px
+				+s(feedback)
+				content: ""
+		.toolbar__content
+			background: #0076a7
+.toolbar__desc
+	position: relative
+	// padding-top: 160px
+	height: 100%
+	cursor: pointer
+	+transition(all .3s)
+	z-index: 106
+.toolbar__title
+	padding-top: 160px
+	font-size: 16px
+	font-weight: bold
+	color: #fff
+	text-align: center
+.toolbar__content
+	position: absolute
+	right: -100%
+	top: 0
+	width: 520px - 30px
+	height: 490px - 90px
+	z-index: 105
+	padding: 45px 15px
+	+opacity(0)
+	+transition(all .3s)
+
+.services
+	color: #fff
+	a
+		color: #fff
+	ul
+		display: inline-block
+		vertical-align: top
+		min-width: 225px
+
+
+
