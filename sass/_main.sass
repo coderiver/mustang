@@ -21,6 +21,7 @@ a
 .container
 	@extend %in
 
+
 .input
 	display: block
 	width: 100%
@@ -306,6 +307,11 @@ a
 
 .page
 	margin-bottom: 15px
+	&.page_inner
+		@extend %in
+		background: url('../img/inner_bg.jpg') 50% 0 repeat-y
+		.hentry
+			min-height: 1px
 
 .topper
 	position: relative
@@ -633,8 +639,8 @@ a
 .hentry__in
 	padding: 45px 35px 25px
 .hentry__title
-	width: 320px
-	font-size: 30px
+	// width: 320px
+	font-size: 29px
 	margin-bottom: 0.6em
 	font-weight: normal
 	line-height: 1.1
@@ -651,9 +657,29 @@ a
 	margin-bottom: 1.5em
 .hentry__content
 	margin-left: 20px
-.hentry__txt
+	h2, h3
+		font-weight: bold
+		margin-bottom: 1.5em
+	h2
+		font-size: 15px
+	h3
+		font-size: 14px
 	p
 		margin-bottom: 1.5em
+	ul
+		margin-bottom: 1.5em
+		li
+			position: relative
+			padding-left: 30px
+			&:before
+				position: absolute
+				top: 6px
+				left: 11px
+				content: ""
+				+s(listarr)
+	.table
+		margin-top: 50px
+
 
 .models
 	color: #363636
@@ -700,6 +726,9 @@ a
 .specialoffers
 	width: 230px
 	float: left
+	&.specialoffers_mod
+		width: 240px
+		margin-bottom: 180px
 .specialoffers__head
 	position: relative
 	height: 110px
@@ -758,3 +787,43 @@ a
 			text-decoration: none
 .specialoffers__desc
 	color: #9a9a9a
+
+.sidenav
+	background: #e9e9e9
+	padding: 60px 20px 60px 30px
+	ul
+		margin-top: -20px
+	li
+		margin-top: 20px
+		font-size: 13px
+		color: #424244
+		a
+			color: #424244
+			text-decoration: none
+			&:hover
+				color: #02a7ec
+				text-decoration: none
+		&.is-active
+			a
+				color: #02a7ec
+
+.table
+	border-collapse: separate
+	border-spacing: 1px
+	th, td
+		font-size: 13px
+		color: #464646
+		padding: 9px 20px
+		text-align: left
+	th
+		text-transform: uppercase
+		font-weight: bold
+		color: #fff
+		background-color: #494949
+	td
+		background-color: #f1f1f1
+
+
+
+
+
