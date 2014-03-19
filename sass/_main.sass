@@ -556,6 +556,7 @@ a
 		float: right
 
 .newspreview
+	float: left
 	position: relative
 	width: 230px
 	height: 250px
@@ -599,7 +600,30 @@ a
 	color: #9a9a9a
 
 
-
-
+.findus
+	float: left
+	width: 230px
+	height: 250px
+	background: url('../img/map_bg.jpg')
+	+cover
+	text-align: center
+.findus__hotzone
+	display: block
+	height: 100%
+	color: #fff
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+.findus__icon
+	display: inline-block
+	+s(map)
+	content: ""
+	margin-top: 84px
+	margin-bottom: 25px
+.findus__title
+	display: block
+	font-size: 16px
+	font-weight: bold
+	color: #fff
 
 
