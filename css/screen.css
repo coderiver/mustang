@@ -245,3 +245,25 @@ a:hover { text-decoration: none; }
 .findus__icon { display: inline-block; background: url('../img/icons-saf820cf117.png') 0 -199px no-repeat; width: 54px; height: 72px; content: ""; margin-top: 84px; margin-bottom: 25px; }
 
 .findus__title { display: block; font-size: 16px; font-weight: bold; color: white; }
+
+.hentry { background-color: white; color: #363636; font-size: 14px; }
+
+.hentry__in { padding: 45px 35px 30px; }
+
+.hentry__title { width: 320px; font-size: 30px; margin-bottom: 1em; font-weight: normal; line-height: 1.1; color: #02a7ec; text-transform: uppercase; }
+.hentry__title a { color: #02a7ec; text-decoration: none; }
+.hentry__title a:hover { text-decoration: underline; }
+
+.hentry__desc { font-size: 18px; font-weight: bold; margin-bottom: 35px; }
+
+.hentry__content { margin-left: 20px; }
+
+.hentry__txt p { margin-bottom: 25px; }
+
+.models { color: #363636; }
+
+.models__title { font-size: 15px; font-weight: bold; margin-bottom: 30px; }
+
+.models__list { margin-top: -15px; }
+
+.models__item { width: 15%; display: inline-block; vertical-align: middle; height: 31px; line-height: 31px; margin-top: 15px; }
