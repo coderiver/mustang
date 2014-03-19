@@ -1,9 +1,21 @@
 $(document).ready(function() {
 
-	//click document
-	$(document).click(function() {
-		$('.js-select').removeClass('is-open');
-	});
+
+
+
+	function sampleTab() {
+		$('.tabs__nav a').on('click', function() {
+			// $('.tabs__nav').removeClass('is-active');
+			// $(this).parent().addClass('is-active');
+			var page = $(this).attr('href');
+			$('.tabs__content').removeClass('is-active');
+			$(page).addClass('is-active');
+			return false;
+		});
+		// $('.tabs__content').on('click', function(event) {
+		// 	event.stopPropagation();
+		// });
+	} sampleTab();
 
 	//select
 	function select() {
@@ -12,7 +24,7 @@ $(document).ready(function() {
 				item = el.find('li'),
 				input = el.find(".js-select-input"),
 				el_text = el.find(".js-select-text"),
-				checkbox = el.find(".checkbox"),
+				// checkbox = el.find(".checkbox"),
 				list = el.find('.js-select-drop');
 
 		el_title.click(function(event){
@@ -25,9 +37,9 @@ $(document).ready(function() {
 			}
 			event.stopPropagation();
 		});
-		checkbox.click(function(event){
-			event.stopPropagation();
-		});
+		// checkbox.click(function(event){
+		// 	event.stopPropagation();
+		// });
 		item.bind("click",function(){
 			el.find('li').removeClass("is-selected");
 			$(this).addClass("is-selected");
@@ -64,6 +76,13 @@ $(document).ready(function() {
 		pager: ".newspreview__pager",
 		slides: ".newspreview__item",
 		pagerTemplate: "<span></span>"
+	});
+
+
+	//click document
+	$(document).click(function(event) {
+		$('.js-select').removeClass('is-open');
+		$('.tabs__content').removeClass('is-active');
 	});
 
 });

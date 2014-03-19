@@ -193,7 +193,8 @@ a:hover { text-decoration: none; }
 .tabs__nav_feedback:hover { background-color: #0684b8; }
 .tabs__nav_feedback:before { position: absolute; top: 65px; left: 50%; margin-left: -32px; background: url('../img/icons-sc7eea8b2e2.png') 0 -483px no-repeat; width: 64px; height: 49px; content: ""; }
 
-.tabs__content { position: absolute; left: 0; top: 0; width: 520px; height: 490px; z-index: 106; padding: 20px 25px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.tabs__content { position: absolute; left: 0; top: 0; width: 520px; height: 490px; z-index: 106; padding: 20px 25px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: none; }
+.tabs__content.is-active { display: block; }
 .tabs__content.feedback { background-color: #0076a7; width: 750px; padding: 80px 25px 20px; }
 .tabs__content.services { background-color: #0e95cd; padding: 45px 0 0 15px; }
 
