@@ -21,8 +21,98 @@ a
 .container
 	@extend %in
 
-// Normally mainpage styles
+.input
+	display: block
+	width: 100%
+	line-height: 16px
+	font-size: 14px
+	color: #9adaf5
+	border: 1px solid #63abc9
+	background-color: #0076a7
+	+box
+	padding: 10px 15px
+	+placeholder-color(#9adaf5)
+	&:focus
+		border: 1px solid #31c1fd
+		+placeholder-color(transparent)
 
+.select
+	position: relative
+	line-height: 16px
+	font-size: 14px
+	color: #9adaf5
+	border: 1px solid #63abc9
+	background-color: #0076a7
+	+box
+	&:hover
+		cursor: pointer
+	span
+		display: block
+		padding: 10px 15px
+		// padding: 0px 32px 0 10px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		em
+			font-style: normal
+		i
+			position: absolute
+			top: 50%
+			margin-top: -3px
+			right: 15px
+			content: ""
+			+s(arrow)
+	&.is-open
+		border: 1px solid #31c1fd
+		span i
+			+rotate(180)
+		.select__drop
+			display: block
+	.select__drop
+		display: none
+		position: absolute
+		top: 100%
+		left: -1px
+		width: 100%
+		background-color: #0076a7
+		border: 1px solid #31c1fd
+		border-width: 0 1px 1px
+		ul
+			margin: 0
+			padding: 0 0 2px
+		li
+			padding: 0 13px
+			height: 40px
+			line-height: 40px
+			margin: 0 2px
+			&:hover
+				background-color: #006c9a
+				color: #fff
+				cursor: pointer
+			&.is-selected
+				background-color: #006c9a
+				color: #fff
+			span
+				padding: 0
+
+.btn
+	display: inline-block
+	font-family: Arial, sans-serif
+	font-size: 15px
+	line-height: 18px
+	font-weight: bold
+	color: #fff
+	border: 3px solid #fff
+	+border-radius(5px)
+	background-color: transparent
+	padding: 7px 12px 9px
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: #0076a7
+		background-color: #fff
+
+// Normally mainpage styles
 .header
 	margin-bottom: 30px
 	font-size: 14px
@@ -284,75 +374,6 @@ a
 		&.is-active
 			+s(pager_active)
 
-
-.toolbar
-	// position: relative
-	+clr
-.toolbar__item
-	position: relative
-	float: left
-	width: 50%
-	height: 240px
-	&.is-active
-		.toolbar__content
-			right: 100%
-			+opacity(1)
-			z-index: 106
-	&.toolbar__item_service
-		.toolbar__desc
-			background-color: #0e95cd
-			&:hover
-				background-color: #14a0da
-			&:before
-				position: absolute
-				top: 52px
-				left: 50%
-				margin-left: -31px
-				+s(service)
-				content: ""
-		.toolbar__content
-			background: #0e95cd
-	&.toolbar__item_feedback
-		.toolbar__desc
-			background-color: #0076a7
-			&:hover
-				background-color: #0684b8
-			&:before
-				position: absolute
-				top: 65px
-				left: 50%
-				margin-left: -32px
-				+s(feedback)
-				content: ""
-		.toolbar__content
-			// z-index: 106
-			width: 750px - 30px
-			background: #0076a7
-.toolbar__desc
-	position: relative
-	// padding-top: 160px
-	height: 100%
-	cursor: pointer
-	+transition(all .3s)
-	z-index: 106
-.toolbar__title
-	padding-top: 160px
-	font-size: 16px
-	font-weight: bold
-	color: #fff
-	text-align: center
-.toolbar__content
-	position: absolute
-	right: -100%
-	top: 0
-	width: 520px - 30px
-	height: 490px - 90px
-	z-index: 105
-	padding: 45px 15px
-	+opacity(0)
-	+transition(all .3s)
-
-
 .tabs
 .tabs__nav
 	+clr
@@ -400,14 +421,15 @@ a
 	width: 520px
 	height: 490px
 	z-index: 106
-	padding: 45px 15px
+	padding: 20px 25px
 	+box
 	&.feedback
+		background-color: #0076a7
 		width: 750px
+		padding: 80px 25px 20px
 	&.services
 		background-color: #0e95cd
 		padding: 45px 0 0 15px
-
 
 .services
 .services__menu
@@ -510,6 +532,29 @@ a
 				+s(icon_wash_h)
 			.icon-disk
 				+s(icon_disk_h)
+
+.feedback
+.feedback__close
+	position: absolute
+	top: 20px
+	right: 25px
+	+s(close)
+	cursor: pointer
+.feedback__form
+	width: 525px
+	margin-left: auto
+	margin-right: auto
+.feedback__row
+	margin-bottom: 30px
+	label
+		display: block
+		margin-bottom: 7px
+		color: #eff6ff
+.feedback__action
+	+clr
+	.btn
+		float: right
+
 
 
 
