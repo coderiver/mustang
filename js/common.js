@@ -52,4 +52,18 @@ $(document).ready(function() {
 		pagerTemplate: "<span></span>"
 	});
 
+	$('.js-newsslider').cycle({
+		fx: "scrollHorz",
+		timeout: 0,
+		log: false,
+		carouselVisible: 1,
+		slideActiveClass: "is-active",
+		pagerActiveClass: "is-active",
+		disabledClass: "is-disabled",
+		slideClass: "newspreview__item",
+		pager: ".newspreview__pager",
+		slides: ".newspreview__item",
+		pagerTemplate: "<span></span>"
+	});
+
 });
