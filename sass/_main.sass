@@ -381,6 +381,62 @@ a
 			+s(pager_active)
 
 .tabs
+	&.tabs_mod
+		position: relative
+		.tabs__nav
+			li
+				float: none
+				width: 135px
+				height: 135px
+			a
+				font-size: 12px
+				padding-top: 90px
+				height: 135px - 90px
+		.tabs__nav_services
+			&:before
+				position: absolute
+				top: 30px
+				left: 50%
+				margin-left: -18px
+				+s(service_sm)
+				content: ""
+		.tabs__nav_feedback
+			&:before
+				position: absolute
+				top: 42px
+				left: 50%
+				margin-left: -17px
+				+s(feedback_sm)
+				content: ""
+		.tabs__nav_findus
+			background-color: #00648e
+			&:hover
+				background-color: #02709e
+			&:before
+				position: absolute
+				top: 40px
+				left: 50%
+				margin-left: -16px
+				+s(map_sm)
+				content: ""
+		.tabs__content
+			position: absolute
+			left: auto
+			right: 100%
+			top: 0
+			width: 605px
+			height: 405px
+			// overflow: hidden
+			z-index: 106
+			padding: 20px 25px
+			+box
+			&.feedback
+				background-color: #0076a7
+				width: 605px
+				padding: 45px 25px 20px
+			&.services
+				background-color: #0e95cd
+				padding: 30px 0 0 15px
 .tabs__nav
 	+clr
 	li
@@ -390,6 +446,7 @@ a
 		height: 240px
 		text-align: center
 	a
+		position: relative
 		display: block
 		height: 240px - 160px
 		padding-top: 160px
@@ -668,15 +725,6 @@ a
 		margin-bottom: 1.5em
 	ul
 		margin-bottom: 1.5em
-		li
-			position: relative
-			padding-left: 30px
-			&:before
-				position: absolute
-				top: 6px
-				left: 11px
-				content: ""
-				+s(listarr)
 	.table
 		margin-top: 50px
 
@@ -823,7 +871,16 @@ a
 	td
 		background-color: #f1f1f1
 
-
+.list
+	li
+		position: relative
+		padding-left: 30px
+		&:before
+			position: absolute
+			top: 6px
+			left: 11px
+			content: ""
+			+s(listarr)
 
 
 
