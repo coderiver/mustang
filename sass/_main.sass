@@ -672,6 +672,24 @@ a
 	background: url('../img/map_bg.jpg')
 	+cover
 	text-align: center
+	&.findus_mod
+		width: 135px
+		height: 135px
+		background: none
+		background-color: #00648e
+		&:hover
+			background-color: #02709e
+		.findus__icon
+			display: inline-block
+			+s(map_sm)
+			content: ""
+			margin-top: 40px
+			margin-bottom: 10px
+		.findus__title
+			// font-weight: normal
+			font-size: 12px
+		.findus__hotzone
+			text-decoration: none
 .findus__hotzone
 	display: block
 	height: 100%
@@ -903,7 +921,7 @@ a
 .simpleview__thumbs
 	+clr
 	margin-bottom: 0 !important
-	li
+	a
 		float: left
 		border: 2px solid transparent
 		width: 50px
@@ -920,3 +938,26 @@ a
 	img
 		min-width: 50px
 		max-height: 50px
+
+   
+// fancy
+.fancybox-close
+	position: absolute
+	top: 15px
+	right: 20px
+	cursor: pointer
+	z-index: 8040
+	+s(fancy_close)
+.fancybox-nav span
+	visibility: visible
+	margin-top: -40px
+.fancybox-next span
+	right: 12px
+	+s(fancy_next)
+	&:hover
+		+s(fancy_next_a)
+.fancybox-prev span
+	left: 12px
+	+s(fancy_prev)
+	&:hover
+		+s(fancy_prev_a)
