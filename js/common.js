@@ -1,7 +1,33 @@
 $(document).ready(function() {
 
+	$("a[rel=fancybox]").fancybox();
 
-
+	function sampleView() {
+		$('.simpleview__thumbs img:first').each(function() {
+			var src = $(this).attr('src');
+			$(this).parent().addClass('is-active')
+			$(this).parents('.simpleview')
+				.find('.simpleview__pic a')
+				.attr({"href": src, "rel": "fancybox"})
+				$div = $("<img src=" + src + ">")
+				$div.appendTo($(this).parents('.simpleview').find('.simpleview__pic a'));
+		});
+		$('.simpleview__thumbs img').on('click', function() {
+			// $('.simpleview__pic').animate({opacity: 0.8}, 'slow', function() {
+	  //     $(this)
+	  //         .animate({opacity: 1});
+		 //  });
+			var src = $(this).attr('src');
+			$('.simpleview__thumbs img').parent().removeClass('is-active');
+			$(this).parent().addClass('is-active');
+			$(this).parents('.simpleview')
+				.find('.simpleview__pic a')
+				.attr({"href": src, "rel": "fancybox"});
+			$(this).parents('.simpleview')
+				.find('.simpleview__pic img')
+				.attr("src", src);
+		});
+	} sampleView();
 
 	function sampleTab() {
 		$('.tabs__nav a').on('click', function() {

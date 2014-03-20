@@ -749,7 +749,6 @@ a
 	line-height: 31px
 	margin-top: 15px
 	a
-
 .benefits
 	width: 230px
 	float: right
@@ -885,5 +884,39 @@ a
 			content: ""
 			+s(listarr)
 
-
-
+.simpleview
+	margin-bottom: 40px
+.simpleview__pic
+	width: 485px
+	height: 300px
+	overflow: hidden
+	background-position: 50% 50%
+	background-repeat: no-repeat no-repeat
+	margin-bottom: 20px
+	// opacity: 0
+	a
+		display: block
+		height: 100%
+	img
+		min-width: 100%
+		max-height: 300px
+.simpleview__thumbs
+	+clr
+	margin-bottom: 0 !important
+	li
+		float: left
+		border: 2px solid transparent
+		width: 50px
+		height: 50px
+		overflow: hidden
+		cursor: pointer
+		margin-left: 10px
+		+box
+		&:first-child
+			margin-left: 0
+		&.is-active
+			border: 2px solid #0e95cd
+			cursor: default
+	img
+		min-width: 50px
+		max-height: 50px
