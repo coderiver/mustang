@@ -28,7 +28,25 @@
 				<div class="header__contacts">
 					<div class="header__tel">+7 (499) 904-33-55</div>
 					<div class="header__adr">Москва ул. Олонецкая дом 21а стр 2</div>
-					<div class="header__callback"><a href="#0"><i></i>Обратный звонок</a></div>
+					<div class="callback">
+						<a class="callback__trigger" href="#0"><i></i>Обратный звонок</a>
+						<div class="callback__popup">
+							<div class="callback__close"></div>
+							<div class="callback__form">
+								<div class="callback__row">
+									<label for="inputname10">Представьтесь</label>
+									<input class="input" type="text" id="inputname10" placeholder="Иванов Петр Алексеевич">
+								</div>
+								<div class="callback__row">
+									<label for="inputtel10">Номер телефона</label>
+									<input class="input" type="tel" id="inputtel10" value="+7 (915) 435- 34-43">
+								</div>
+								<div class="callback__action">
+									<button type="submit" class="btn">Отправить</button>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="header__24h"></div>
 				</div>
 			</div>
@@ -82,7 +100,7 @@
 								<img src="img/pic_1.jpg" alt="img">
 							</div>
 							<div class="main-block__content">
-								<h2 class="main-block__title">Фирменный эвакуатор</h2>
+								<div class="main-block__title">Фирменный эвакуатор</div>
 								<div class="main-block__desc">Мы всегда рады видеть Вас в нашем<br> техцентре для решения любых<br> возникших проблем<br> с автомобилем</div>
 								<a href="#0" class="main-block__moar">Подробнее</a>
 							</div>
@@ -92,7 +110,7 @@
 								<img src="img/pic_1.jpg" alt="img">
 							</div>
 							<div class="main-block__content">
-								<h2 class="main-block__title">Фирменный эвакуатор</h2>
+								<div class="main-block__title">Фирменный эвакуатор</div>
 								<div class="main-block__desc">Мы всегда рады видеть Вас в нашем<br> техцентре для решения любых<br> возникших проблем<br> с автомобилем</div>
 								<a href="#0" class="main-block__moar">Подробнее</a>
 							</div>
@@ -276,8 +294,8 @@
 					<!-- begin hentry -->
 					<div class="hentry">
 						<div class="hentry__in">
-							<h2 class="hentry__title">Широкий спектр<br> услуг по ремонту автомобилей</h2>
-							<div class="hentry__desc">Мы всегда рады видеть Вас в нашем техцентре для решения любых возникших проблем с автомобилем</div>
+							<h1>Широкий спектр<br> услуг по ремонту автомобилей</h1>
+							<h2>Мы всегда рады видеть Вас в нашем техцентре для решения любых возникших проблем с автомобилем</h2>
 							<div class="hentry__content">
 								<p>Провести ТО и любой другой профилактики включая компьютерную диагностику, быстро провести шиномонтаж, восстановить кожу автосалона или велюра, заменить тормозные колодки или радиатор и многое другое.</p>
 
@@ -286,7 +304,7 @@
 								<p>Наш автосервис имеет единую концепцию и гибкую систему скидок, тем самым стремясь к высокому уровню обслуживания клиентов. Мы ценим и любим своих клиентов, поэтому стараемся точно соблюдать сроки и подходить индивидуально к проблеме каждого автовладельца, обратившегося в наш автосервис.</p>
 								<!-- begin models -->
 								<div class="models">
-									<h2 class="models__title">Работаем со всеми марками автомобилей</h2>
+									<div class="models__title">Работаем со всеми марками автомобилей</div>
 									<ul class="models__list">
 										<li class="models__item">
 											<a href="#0">
@@ -393,18 +411,18 @@
 					<!-- begin benefits -->
 					<div class="benefits">
 						<div class="benefits__in">
-							<h2 class="benefits__title">почему стоит обратиться к нам</h2>
+							<div class="benefits__title">Почему стоит обратиться к нам</div>
 							<ul class="benefits__list">
 								<li class="benefits__item">
-									<i class="benefits__icon icon-nonstop"></i>
+									<a href="#0" class="benefits__icon"><i class="icon-nonstop"></i></a>
 									<div class="benefits__txt">Мы работаем круглосуточно</div>
 								</li>
 								<li class="benefits__item">
-									<i class="benefits__icon icon-coffee"></i>
+									<a href="#0" class="benefits__icon"><i class="icon-coffee"></i></a>
 									<div class="benefits__txt">Для клиентов есть зона отдыха с кафе</div>
 								</li>
 								<li class="benefits__item">
-									<i class="benefits__icon icon-spares"></i>
+									<a href="#0" class="benefits__icon"><i class="icon-spares"></i></a>
 									<div class="benefits__txt">Широкий ассортимент запчастей</div>
 								</li>
 							</ul>

@@ -1,12 +1,20 @@
 $(document).ready(function() {
 
+	$('.callback__trigger').on('click', function() {
+		$(this).parent().find('.callback__popup').slideToggle('fast');
+		return false;
+	});
+	$('.callback__close').on('click', function() {
+		$(this).parents('.callback').find('.callback__popup').slideUp('fast');
+	});
+
 	$(".js-fancybox").fancybox();
 
 	function sampleView() {
 
 		// $('.simpleview__pic a').on('click', function() {
-		// 	var getattr = $(this).attr("data-slidenum");
-		// 	alert(getattr);
+		//	var getattr = $(this).attr("data-slidenum");
+		//	alert(getattr);
 		// });
 		// $.fancybox.jumpto( [index] )
 
@@ -20,11 +28,11 @@ $(document).ready(function() {
 		$('.simpleview__thumbs img:first').each(function() {
 			var src = $(this).attr('src');
 			var index = $(this).parent().index();
-			$(this).parent().addClass('is-active')
+			$(this).parent().addClass('is-active');
 			$(this).parents('.simpleview')
 				.find('.simpleview__pic a')
-				.attr({"href": src, "data-slidenum": index})
-				$div = $("<img src=" + src + ">")
+				.attr({"href": src, "data-slidenum": index});
+				$div = $("<img src=" + src + ">");
 				$div.appendTo($(this).parents('.simpleview').find('.simpleview__pic a'));
 		});
 		$('.simpleview__thumbs a').on('click', function() {
@@ -124,6 +132,9 @@ $(document).ready(function() {
 			$('.tabs__content').removeClass('is-active');
 		}
 		$('.js-select').removeClass('is-open');
+		if($(event.target).parents().index($('.callback')) == -1) {
+			$('.callback__popup').slideUp('fast');
+		}
 	});
 
 });
