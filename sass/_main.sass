@@ -204,15 +204,16 @@ a
 			color: #02a7ec
 			text-decoration: none
 // Sticky footer
-.out
-	min-height: 100%
-	height: auto !important
-	height: 100%
-	margin: 0 auto -225px
-.footer, .push
-	height: 225px
+// .out
+// 	min-height: 100%
+// 	height: auto !important
+// 	height: 100%
+// 	margin: 0 auto -225px
+// .footer, .push
+// 	height: 225px
 
 .footer
+	height: 225px
 	font-size: 13px
 	color: #7a7a7a
 .footer__in
@@ -316,8 +317,6 @@ a
 	height: 490px
 	overflow: hidden
 .main-block__picture
-	position: relative
-	width: 520px
 	&:before
 		position: absolute
 		top: 0
@@ -331,6 +330,9 @@ a
 		display: block
 		min-width: 100%
 		min-height: 100%
+.main-block__item
+	position: relative
+	width: 520px
 .main-block__content
 	position: absolute
 	top: 95px
@@ -375,26 +377,22 @@ a
 			+s(pager_active)
 
 .tabs
-	&.tabs_mod
-		position: relative
-		.tabs__nav
-			li
-				float: none
-				width: 135px
-				height: 135px
-			a
-				font-size: 12px
-				padding-top: 90px
-				height: 135px - 90px
-		.tabs__nav_services
-			&:before
-				position: absolute
-				top: 30px
-				left: 50%
-				margin-left: -18px
-				+s(service_sm)
-				content: ""
-		.tabs__nav_feedback
+	position: relative
+	+clr
+.feedback
+	float: left
+	height: 240px
+	width: 230px
+	// position: relative
+	z-index: 102
+	&.feedback__mod
+		float: none
+		width: 135px
+		height: 135px
+		.feedback__trigger
+			font-size: 12px
+			padding-top: 90px
+			height: 135px - 90px
 			&:before
 				position: absolute
 				top: 42px
@@ -402,68 +400,25 @@ a
 				margin-left: -17px
 				+s(feedback_sm)
 				content: ""
-		.tabs__nav_findus
-			background-color: #00648e
-			&:hover
-				background-color: #02709e
-			&:before
-				position: absolute
-				top: 40px
-				left: 50%
-				margin-left: -16px
-				+s(map_sm)
-				content: ""
-		.tabs__content
+		.feedback__popup
 			position: absolute
 			left: auto
 			right: 100%
 			top: 0
 			width: 605px
 			height: 405px
-			// overflow: hidden
-			z-index: 106
-			padding: 20px 25px
-			+box
-			&.feedback
-				background-color: #0076a7
-				width: 605px
-				padding: 45px 25px 20px
-			&.services
-				background-color: #0e95cd
-				padding: 30px 0 0 15px
-.tabs__nav
-	+clr
-	li
-		position: relative
-		float: left
-		width: 230px
-		height: 240px
-		text-align: center
-	a
-		position: relative
-		display: block
-		height: 240px - 160px
-		padding-top: 160px
-		font-size: 16px
-		font-weight: bold
-		color: #fff
-		text-align: center
-		text-decoration: none
-.tabs__nav_services
-	background-color: #0e95cd
-	&:hover
-		background-color: #14a0da
-	&:before
-		position: absolute
-		top: 52px
-		left: 50%
-		margin-left: -31px
-		+s(service)
-		content: ""
-.tabs__nav_feedback
+			padding: 30px 0 0 15px
+.feedback__trigger
+	position: relative
 	background-color: #0076a7
-	&:hover
-		background-color: #0684b8
+	height: 240px - 160px
+	padding-top: 160px
+	font-size: 16px
+	font-weight: bold
+	color: #fff
+	text-align: center
+	text-decoration: none
+	cursor: pointer
 	&:before
 		position: absolute
 		top: 65px
@@ -471,31 +426,104 @@ a
 		margin-left: -32px
 		+s(feedback)
 		content: ""
-.tabs__content
+	&:hover
+		background-color: #0684b8
+.feedback__popup
+	background-color: #0076a7
 	position: absolute
-	left: 0
 	top: 0
-	width: 520px
+	left: -520px
+	width: 750px
+	padding: 45px 25px 20px
 	height: 490px
-	z-index: 106
-	padding: 20px 25px
 	+box
 	display: none
+	z-index: 102
 	&.is-active
 		display: block
-	&.feedback
-		background-color: #0076a7
-		width: 750px
-		padding: 80px 25px 20px
-	&.services
-		background-color: #0e95cd
-		padding: 45px 0 0 15px
+.feedback__close
+	position: absolute
+	top: 20px
+	right: 25px
+	+s(close)
+	cursor: pointer
+.feedback__form
+	width: 525px
+	margin-left: auto
+	margin-right: auto
+.feedback__row
+	margin-bottom: 30px
+	label
+		display: block
+		margin-bottom: 7px
+		color: #eff6ff
+.feedback__action
+	+clr
+	.btn
+		float: right
 
 .services
+	&.services__mod
+		.services__trigger
+			float: none
+			width: 135px
+			// height: 135px
+			font-size: 12px
+			padding-top: 90px
+			height: 135px - 90px
+			&:before
+				position: absolute
+				top: 30px
+				left: 50%
+				margin-left: -18px
+				+s(service_sm)
+				content: ""
+		.services__menu
+			position: absolute
+			left: auto
+			right: 100%
+			top: 0
+			width: 605px
+			height: 405px
+			padding: 30px 0 0 15px
+.services__trigger
+	position: relative
 	background-color: #0e95cd
-	padding: 30px 0 0 15px
-.services__menu
+	float: left
+	// display: block
+	height: 240px - 160px
+	padding-top: 160px
+	width: 230px
+	font-size: 16px
+	font-weight: bold
 	color: #fff
+	text-align: center
+	text-decoration: none
+	&:before
+		position: absolute
+		top: 52px
+		left: 50%
+		margin-left: -31px
+		+s(service)
+		content: ""
+	&:hover
+		background-color: #14a0da
+		.services__menu
+			display: block
+.services__menu
+	padding: 30px 0 0 15px
+	background-color: #14a0da
+	position: absolute
+	top: 0
+	right: 100%
+	width: 520px
+	height: 490px
+	color: #fff
+	display: none
+	// display: block
+	z-index: 102
+	text-align: left
+	+box
 	ul
 		display: inline-block
 		vertical-align: top
@@ -595,6 +623,50 @@ a
 			.icon-disk
 				+s(icon_disk_h)
 
+.findus
+	float: left
+	width: 230px
+	height: 250px
+	background: url('../img/map_bg.jpg')
+	+cover
+	text-align: center
+	&.findus_mod
+		width: 135px
+		height: 135px
+		background: none
+		background-color: #00648e
+		&:hover
+			background-color: #02709e
+		.findus__icon
+			display: inline-block
+			+s(map_sm)
+			content: ""
+			margin-top: 40px
+			margin-bottom: 10px
+		.findus__title
+			// font-weight: normal
+			font-size: 12px
+		.findus__hotzone
+			text-decoration: none
+.findus__hotzone
+	display: block
+	height: 100%
+	color: #fff
+	text-decoration: none
+	&:hover
+		text-decoration: none
+.findus__icon
+	display: inline-block
+	+s(map)
+	content: ""
+	margin-top: 84px
+	margin-bottom: 25px
+.findus__title
+	display: block
+	font-size: 16px
+	font-weight: bold
+	color: #fff
+
 .callback
 	position: relative
 	i
@@ -630,30 +702,7 @@ a
 	+clr
 	.btn
 		float: right
-.feedback
-	background-color: #0076a7
-	// width: 605px
-	padding: 45px 25px 20px
-.feedback__close
-	position: absolute
-	top: 20px
-	right: 25px
-	+s(close)
-	cursor: pointer
-.feedback__form
-	width: 525px
-	margin-left: auto
-	margin-right: auto
-.feedback__row
-	margin-bottom: 30px
-	label
-		display: block
-		margin-bottom: 7px
-		color: #eff6ff
-.feedback__action
-	+clr
-	.btn
-		float: right
+
 
 .newspreview
 	float: left
@@ -699,50 +748,6 @@ a
 	font-size: 13px
 	color: #9a9a9a
 
-.findus
-	float: left
-	width: 230px
-	height: 250px
-	background: url('../img/map_bg.jpg')
-	+cover
-	text-align: center
-	&.findus_mod
-		width: 135px
-		height: 135px
-		background: none
-		background-color: #00648e
-		&:hover
-			background-color: #02709e
-		.findus__icon
-			display: inline-block
-			+s(map_sm)
-			content: ""
-			margin-top: 40px
-			margin-bottom: 10px
-		.findus__title
-			// font-weight: normal
-			font-size: 12px
-		.findus__hotzone
-			text-decoration: none
-.findus__hotzone
-	display: block
-	height: 100%
-	color: #fff
-	text-decoration: none
-	&:hover
-		text-decoration: underline
-.findus__icon
-	display: inline-block
-	+s(map)
-	content: ""
-	margin-top: 84px
-	margin-bottom: 25px
-.findus__title
-	display: block
-	font-size: 16px
-	font-weight: bold
-	color: #fff
-
 .hentry
 	background-color: #fff
 	color: #363636
@@ -784,7 +789,6 @@ a
 	.table
 		margin-top: 50px
 
-
 .models
 	color: #363636
 .models__title
@@ -802,6 +806,7 @@ a
 	line-height: 31px
 	margin-top: 15px
 	a
+
 .benefits
 	width: 230px
 	float: right
@@ -895,10 +900,7 @@ a
 .sidenav
 	background: #e9e9e9
 	padding: 50px 0 60px
-	ul
-		// margin-top: -20px
 	li
-		// margin-top: 20px
 		font-size: 13px
 		color: #424244
 		a
@@ -980,7 +982,6 @@ a
 		min-width: 50px
 		max-height: 50px
 
-   
 // fancy
 .fancybox-close
 	position: absolute
