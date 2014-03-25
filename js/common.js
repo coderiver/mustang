@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 	$('.js-mainslider').cycle({
 		fx: "scrollHorz",
-		timeout: 0,
+		timeout: 3600,
 		log: false,
 		carouselVisible: 1,
 		slideActiveClass: "is-active",
